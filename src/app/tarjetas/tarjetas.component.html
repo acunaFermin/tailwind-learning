@@ -1,0 +1,61 @@
+<div id="cards" class="
+    w-10/12
+    mx-auto
+    mt-10
+    flex
+    flex-nowrap
+    justify-between    
+">
+    <div *ngFor="let card of cards" class="
+        group
+        flex
+        flex-col
+        items-center
+        h-64
+        w-1/6
+        border-2
+        shadow-xl
+        text-center
+        border-gray-300
+        hover:bg-black
+        transition
+        duration-100
+        overflow-hidden
+        cursor-pointer
+    ">
+         <p class="
+            symbol
+            block
+            text-4xl
+            m-5
+            group-hover:text-azul-claro
+            group-hover:text-5xl
+            group-hover:animate-from-above
+            transition
+            duration-200
+         ">
+             {{card.icon}}
+         </p>
+         <h2 class="
+            mt-2
+            mb-5
+            text-lg
+            text-azul-claro
+            group-hover:text-white
+            trebuchet
+            group-hover:animate-from-right
+            ">
+            {{card.category}}
+        </h2>
+        <p class="
+        m-2
+            text-azul-claro
+            group-hover:text-white
+            trebuchet
+            text-sm
+            group-hover:animate-from-bellow
+         ">
+            {{card.description}}
+        </p>
+    </div>
+</div>

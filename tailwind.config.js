@@ -28,15 +28,19 @@ module.exports = {
 			animation: {
 				"spin-low": "spin 3s linear infinite",
 				"from-bellow": "fromBellow 500ms linear",
+				"from-above": "fromAbove 200ms linear",
 				"from-right": "fromRight 300ms linear",
 				"bg-banner": "backBanner 10s linear infinite",
 				"text-banner": "showBannerText 3s linear"
 			},
 			keyframes: {
 				fromBellow: {
-					"0%": { transform: "translateY(0%)" },
-					"50%": { transform: "translateY(200%)" },
-					"100%": { transform: "translateY(0%)" },
+					"0%": { transform: "translateY(600%)", opacity: 0 },
+					"100%": { transform: "translateY(0%)", opacity: 1 },
+				},
+				fromAbove: {
+					"0%": { transform: "translateY(-600%)", opacity: 0 },
+					"100%": { transform: "translateY(0%)", opacity: 1 },
 				},
 				fromRight: {
 					"0%": { transform: "translateX(300%)" },
@@ -69,6 +73,7 @@ module.exports = {
 		//activa las animaciones para el group-hover
 		animation: ["responsive", "hover", "group-hover"],
 		animate: ["responsive", "hover", "group-hover"],
+		fontSize: ["responsive", "hover", "group-hover"],
 		extend: {},
 	},
 	plugins: [],

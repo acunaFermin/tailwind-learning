@@ -54,15 +54,29 @@
 
 @layer components {
 	.menu-item {
-		@apply mr-5 ml-5 tracking-wider flex-none;
+		@apply
+			mr-5
+			ml-5
+			tracking-wider
+			flex-none;
 	}
 
 	.menu-item-a {
-		@apply block transition duration-200 hover:text-azul-claro transform hover:scale-125;
+		@apply
+			block
+			transition
+			duration-200
+			hover:text-azul-claro
+			transform
+			hover:scale-125;
 	}
 
 	.text-banner{
 		font-family: "BebasNeue";
 		text-shadow: 2px 2px 1px black;
 	}
+
+	
+
+
 }
